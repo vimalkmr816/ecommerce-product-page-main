@@ -8,16 +8,20 @@
 	<link rel="stylesheet" href="scss/style.css">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 	<title>Frontend Mentor | E-commerce product page</title>
+	<script src="js/main.js" defer></script>
 </head>
 
 <body>
 	<header>
 		<nav class="navbar">
 			<div class="nav">
+				<div class="hamburger_menu">
+					<p id="ham_btn">&#9776;</p>
+				</div>
 				<a class="nav_links href=" #">
 					<img src="images/logo.svg" alt="logo" />
 				</a>
-				<ul class="nav_list">
+				<ul class="nav_list" id="mob_menu">
 					<li class="nav_list_items">Collections</li>
 					<li class="nav_list_items">Men</li>
 					<li class="nav_list_items">Women</li>
@@ -30,7 +34,7 @@
 					<img src="images/icon-cart.svg" alt="logo" />
 				</a>
 				<a class="nav_links" href="#">
-					<img src="images/image-avatar.png" alt="logo" width="50px" />
+					<img src="images/image-avatar.png" alt="logo" id="profile_icon" />
 				</a>
 			</div>
 		</nav>
@@ -38,7 +42,9 @@
 	<main class="main">
 		<div class="container product_image">
 			<div class="main_img">
-				<img class="product_img" src="images/image-product-1.jpg" alt="main_img" width="400px">
+				<button id="prev_img_btn"><img src="images/icon-previous.svg" alt="prev_img_btn"> </button>
+				<img class="product_img" src="images/image-product-1.jpg" alt="main_img" id="main_img">
+				<button id="next_img_btn"><img src="images/icon-next.svg" alt="next_img_btn"> </button>
 			</div>
 			<div class="small_img">
 				<img class="small_product_img" src="images/image-product-1-thumbnail.jpg" alt="" width="70px">
@@ -69,7 +75,7 @@
 					<button class="product_buy_quantity_decrease">
 						<img src="/images/icon-minus.svg" alt="increase_btn" id="decrement_btn">
 					</button>
-					0
+					<p id="quantity">0</p>
 					<button class="product_buy_quantity_increase">
 						<img src="/images/icon-plus.svg" alt="decrease_btn" id="increment_btn">
 					</button>
