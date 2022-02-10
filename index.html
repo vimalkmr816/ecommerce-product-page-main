@@ -1,44 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- displays site properly based on user's device -->
+	<link rel="stylesheet" href="scss/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+	<title>Frontend Mentor | E-commerce product page</title>
 </head>
+
 <body>
+	<header>
+		<nav class="navbar">
+			<div class="nav">
+				<a class="nav_links href=" #">
+					<img src="images/logo.svg" alt="logo" />
+				</a>
+				<ul class="nav_list">
+					<li class="nav_list_items">Collections</li>
+					<li class="nav_list_items">Men</li>
+					<li class="nav_list_items">Women</li>
+					<li class="nav_list_items">About</li>
+					<li class="nav_list_items">Contact</li>
+				</ul>
+			</div>
+			<div class="nav">
+				<a class="nav_links " href="#">
+					<img src="images/icon-cart.svg" alt="logo" />
+				</a>
+				<a class="nav_links" href="#">
+					<img src="images/image-avatar.png" alt="logo" width="50px" />
+				</a>
+			</div>
+		</nav>
+	</header>
+	<main class="main">
+		<div class="container product_image">
+			<div class="main_img">
+				<img class="product_img" src="images/image-product-1.jpg" alt="main_img" width="400px">
+			</div>
+			<div class="small_img">
+				<img class="small_product_img" src="images/image-product-1-thumbnail.jpg" alt="" width="70px">
+				<img class="small_product_img" src="images/image-product-2-thumbnail.jpg" alt="" width="70px">
+				<img class="small_product_img" src="images/image-product-3-thumbnail.jpg" alt="" width="70px">
+				<img class="small_product_img" src="images/image-product-4-thumbnail.jpg" alt="" width="70px">
+			</div>
+		</div>
+		<div class="container product_text">
+			<div class="company_tagline">
+				Sneaker Company
+			</div>
+			<div class="product_title">
+				Fall Limited Edition Sneakers
+			</div>
+			<div class="product_desc">
+				These low-profile sneakers are your perfect casual wear companion.
+				Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+			</div>
+			<div class="product_price">
+				<div class="product_price_final">$125.00 </div>
+				<div class="product_price_discount"> 50%</div>
+				<div class="product_price_original"> $250.00 0</div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+			</div>
+			<div class="product_buy">
+				<div class="product_buy_quantity">
+					<button class="product_buy_quantity_decrease">
+						<img src="/images/icon-minus.svg" alt="increase_btn" id="decrement_btn">
+					</button>
+					0
+					<button class="product_buy_quantity_increase">
+						<img src="/images/icon-plus.svg" alt="decrease_btn" id="increment_btn">
+					</button>
+				</div>
+				<button class="product_buy_atc">
+					<img class="cart_icon" src="/images/icon-cart-light.svg" alt="cart_icon">
+					Add to cart
+				</button>
+			</div>
+		</div>
+	</main>
+	<footer class="container attribution ">
+		<p>
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+				Frontend Mentor </a>. Coded by <a href="#">Vimal Kumar</a>.
+		</p>
+	</footer>
 </body>
+
 </html>
