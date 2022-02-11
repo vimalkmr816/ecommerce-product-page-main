@@ -1,4 +1,5 @@
-@media screen and (max-width: 376px) {
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;700&display=swap");
+@media screen and (max-width: 375px) {
   .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9,6 +10,25 @@
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: rem;
+  }
+  .navbar .darken_body {
+    position: fixed;
+    size: fill;
+    height: 200vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0%;
+    -webkit-transition: 0.5s opacity ease-in-out;
+    transition: 0.5s opacity ease-in-out;
+  }
+  .navbar .darken_body.active {
+    position: fixed;
+    size: fill;
+    height: 200vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 50%;
+    z-index: 2;
   }
   .navbar .nav {
     display: -webkit-box;
@@ -23,25 +43,39 @@
   }
   .navbar .nav .hamburger_menu {
     font-size: 2rem;
+    z-index: 4;
     cursor: pointer;
   }
   .navbar .nav_links > img {
     margin: 1rem;
   }
   .navbar .nav_list {
-    display: none;
+    background: var(--white);
+    font-weight: bold;
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    padding-top: 4rem;
+    top: 0rem;
+    left: -12rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    -webkit-transition: 0.4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
+    z-index: 3;
   }
   .navbar .nav_list.active {
-    display: block;
-    background: var(--grayishBlue);
-    border-radius: 10px;
-    border: 2px solid;
+    background: var(--white);
+    font-weight: bold;
+    height: 100vh;
+    width: 70vw;
     position: absolute;
-    top: 5rem;
-    left: 1rem;
-    z-index: 2;
-    -webkit-transition: 2s ease-in-out;
-    transition: 2s ease-in-out;
+    padding-top: 4rem;
+    top: 0rem;
+    left: 0rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    z-index: 3;
   }
   .navbar .nav_list_items {
     margin: 1rem;
@@ -51,6 +85,56 @@
   }
   .navbar .nav #profile_icon {
     width: 30px;
+  }
+  .menus {
+    margin: 0.5rem 1rem;
+    padding: 1rem;
+    z-index: 3;
+    border-radius: 10px;
+    position: absolute;
+    width: 90vw;
+    background: var(--white);
+  }
+  .menus .cart_menu_title {
+    font-weight: bold;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--grayishBlue);
+  }
+  .menus .cart_menu #cart_menu_img {
+    width: 50px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 1rem;
+  }
+  .menus .cart_menu #delete_icon {
+    float: right;
+    width: 20px;
+  }
+  .menus .cart_menu_product {
+    padding: 1rem 0;
+    color: var(--darkGrayishBlue);
+  }
+  .menus .cart_menu_product_pricing_single_price {
+    display: inline;
+  }
+  .menus .cart_menu_product_pricing_quantity {
+    display: inline;
+  }
+  .menus .cart_menu_product_pricing_total_price {
+    display: inline;
+    color: black;
+    font-weight: bold;
+  }
+  .menus .cart_menu #checkout_btn {
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.7rem;
   }
   .main {
     display: -webkit-box;
@@ -72,6 +156,8 @@
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 1rem;
+    -webkit-transition: 1s all ease-in-out;
+    transition: 1s all ease-in-out;
   }
   .main .product_image .main_img #next_img_btn {
     position: relative;
@@ -89,10 +175,12 @@
     border-radius: 100px;
   }
   .main .product_image .main_img .product_img {
+    padding: 0;
+    margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100vw;
+    width: 100%;
   }
   .main .product_image .small_img {
     display: -webkit-box;
@@ -238,7 +326,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 :root {
@@ -252,7 +340,7 @@ body {
   -lightblack: black;
 }
 
-@media only screen and (min-width: 376px) and (max-width: 1920px) {
+@media only screen and (min-width: 375px) and (max-width: 1920px) {
   .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
