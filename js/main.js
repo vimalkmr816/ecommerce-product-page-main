@@ -68,10 +68,16 @@ function updatePrices() {
 	const originalPrice = 2140.0;
 	const discount = 25;
 	const finalPrice = originalPrice * (1 - discount / 100);
-	oldPrice.textContent = "$" + originalPrice;
+	oldPrice.textContent = `{}`;
 	discountedPrice.textContent = discount + "%";
 	newPrice.textContent = "$" + finalPrice;
 }
 updatePrices();
 
 //opening cart menu
+const cartBtn = document.getElementById("cart_btn");
+const cartMenu = document.querySelector(".cart_menu");
+cartBtn.addEventListener("click", () => {
+	console.log("Vimal works");
+	cartMenu.classList.toggle("active");
+});

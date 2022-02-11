@@ -51,45 +51,109 @@ body {
 			}
 		}
 	}
+	.menus {
+		.cart_menu {
+			display: none;
+			margin: 0.5rem 1rem;
+			padding: 1rem;
+			z-index: 1;
+			right: 17rem;
+			top: 5rem;
+			border-radius: 10px;
+			position: absolute;
+			width: 30vw;
+			box-shadow: -1px -1px 20px var(--grayishBlue);
+			// top: -21rem;
+			background: var(--white);
+			transition: 4s display ease-in-out;
+			.cart_menu_title {
+				font-weight: bold;
+				padding: 1rem 0;
+				border-bottom: 1px solid var(--grayishBlue);
+			}
+			#cart_menu_img {
+				width: 50px;
+				border-radius: 5px;
+				float: left;
+				margin-right: 1rem;
+			}
+			#delete_icon {
+				float: right;
+				width: 20px;
+			}
+			.cart_menu_product {
+				padding: 1rem 0;
+				color: var(--darkGrayishBlue);
+				&_pricing {
+					&_single_price {
+						display: inline;
+					}
+					&_quantity {
+						display: inline;
+					}
+					&_total_price {
+						display: inline;
+						color: black;
+						font-weight: bold;
+					}
+				}
+			}
+			#checkout_btn {
+				background: var(--orange);
+				color: var(--white);
+				border: none;
+				border-radius: 10px;
+				width: 100%;
+				font-weight: bold;
+				font-size: 1rem;
+				margin-top: 1rem;
+				padding: 0.7rem;
+			}
+		}
+		.cart_menu.active {
+			display: block;
+			position: absolute;
+		}
+	}
 	.main {
 		display: flex;
 		align-items: center;
-		width: fit-content;
-		margin: 4rem 4rem;
+		justify-content: center;
+		margin: 4rem auto;
+		width: 100vw;
+		// flex-wrap: wrap;
+		flex-basis: 50vw;
 		.product_image {
-			width: 30vw;
-			margin: 0 10rem;
+			display: flex;
+			flex-direction: column;
+			padding: 4rem 4rem;
 			.main_img {
 				margin-bottom: 1rem;
+				max-width: 350px;
 				& > button {
 					display: none;
 				}
 				.product_img {
-					width: 30vw;
+					width: 100%;
 					border-radius: 15px;
 				}
 			}
 			.small_img {
+				max-width: 350px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
 				.small_product_img {
 					cursor: pointer;
 					border-radius: 7px;
-					margin: 0 1.125rem;
-					&:first-child {
-						margin-left: 0;
-					}
-					&:last-child {
-						margin-right: 0;
-					}
-					&:active {
-						outline: 2px solid var(--orange);
-						opacity: 15%;
-					}
+					// margin: 0 1.125rem;
 				}
 			}
 		}
 		.product_text {
-			width: 50vw;
-			padding-right: 10rem;
+			flex-basis: 30vw;
+			// padding-right: 10rem;
 			.company_tagline {
 				color: var(--orange);
 				font-weight: bold;
